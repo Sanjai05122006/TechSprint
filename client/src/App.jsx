@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import Contact from './pages/Contact';
 import Leaderboard from './pages/Leaderboard';
 import Profile from './pages/Profile';
+import Discussion from './pages/Discussion';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/discussion" element={<Discussion />} />
                 <Route path="/leaderboard" element={<Leaderboard />} />
                 <Route path="/profile" element={<Profile />} />
               </Routes>
