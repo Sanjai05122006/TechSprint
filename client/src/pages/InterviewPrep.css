@@ -1,0 +1,6 @@
+/* Layout specific for InterviewPrep */
+@media (max-width: 1024px) {
+    .page-container>div {
+        grid-template-columns: 1fr !important;
+    }
+}

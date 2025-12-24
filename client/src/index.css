@@ -1,0 +1,173 @@
+:root {
+  /* Default: Dark Theme (LeetCode style) */
+  --bg-main: #1a1a1a;
+  --bg-surface: #282828;
+  --bg-card: #333333;
+  --border: #3e3e3e;
+  --text-primary: #eff1f6;
+  --text-secondary: #9ea0a5;
+  --brand: #ffa116;
+  --brand-hover: #ffb84d;
+  --success: #2cbb5d;
+  --warning: #fac515;
+  --error: #ef4743;
+  --nav-bg: #282828;
+  --transition: all 0.2s ease;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] {
+  --bg-main: #f7f8fa;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --border: #eeeeee;
+  --text-primary: #262626;
+  --text-secondary: #8c8c8c;
+  --brand: #ffa116;
+  --nav-bg: #ffffff;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Professional Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.btn-brand {
+  background: var(--brand);
+  color: #000;
+}
+
+.btn-brand:hover {
+  background: var(--brand-hover);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  background: var(--bg-card);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-easy {
+  background: rgba(44, 187, 93, 0.1);
+  color: #2cbb5d;
+}
+
+.badge-medium {
+  background: rgba(250, 197, 21, 0.1);
+  color: #fac515;
+}
+
+.badge-hard {
+  background: rgba(239, 71, 67, 0.1);
+  color: #ef4743;
+}
+
+/* Theme Toggle styles */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+/* Auth Pages Styling */
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: var(--brand);
+}
